@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    class: temperature
-    thuoc tinh: C:int
-    method: convertCToKenvin():int
-            convertCtoF():int
+    <script>
+        class Temperature {
+            constructor(Ctemperature) {
+                this.Ctemperature = Ctemperature;
+            }
+            getFtemperature() {
+                let Ftemperature = this.Ctemperature * 33.8;
+                return Ftemperature;
+            }
+
+            getKtemperature() {
+                let Ktemperature = this.Ctemperature + 273.15;
+                return Ktemperature;
+            }
+        }
+
+        let temperature = new Temperature(25);
+        let Ftemperature = temperature.getFtemperature();
+        let Ktemperature = temperature.getKtemperature();
+        alert('Độ F tương ứng là: ' + Ftemperature + ' Độ K tương ứng là: ' + Ktemperature);
+
+    </script>
 </body>
+
 </html>
